@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fffdf5;
+}
+
+/* 🔥 BANNER */
+.banner {
+    background: url('https://images.unsplash.com/photo-1604909052743-94e838986d24') no-repeat center/cover;
+    height: 300px;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.overlay h1 {
+    font-size: 40px;
+    margin: 10px 0;
+    color: #ffd700;
+}
+
+.overlay p {
+    font-size: 18px;
+}
+
+/* 🍗 MENÚ */
+#menu {
+    text-align: center;
+    padding: 40px;
+}
+
+#menu h2 {
+    color: #ffb300;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 2px solid #ffd700;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #ff6600;
+}
+
+/* 📍 DIRECCIÓN y CONTACTO */
+section {
+    padding: 30px;
+    text-align: center;
+}
+
+#direccion {
+    background: #fff3cd;
+}
+
+#contacto {
+    background: #ffe082;
+}
+
+/* FOOTER */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
