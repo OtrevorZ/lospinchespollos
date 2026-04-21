@@ -44,6 +44,7 @@ body {
     color: #ffb300;
 }
 
+/* CONTENEDOR GRID */
 .menu-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, 220px);
@@ -52,21 +53,66 @@ body {
     padding: 20px;
 }
 
+/* TARJETAS */
 .card {
     background: white;
     border: 2px solid #ffd700;
     width: 220px;
-    height: 200px; /* tamaño fijo */
+    height: 200px;
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+/* TÍTULO */
 .card h3 {
     color: #ff6600;
+}
+
+/* PRECIO */
+.precio {
+    font-weight: bold;
+    color: #ff6600;
+}
+
+/* IMAGEN OCULTA */
+.img-hover {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: none;
+}
+
+/* INFO OCULTA */
+.info {
+    opacity: 0;
+    font-size: 14px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+/* HOVER 🔥 */
+.card:hover {
+    transform: scale(1.05);
+    height: 300px;
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* MOSTRAR IMAGEN */
+.card:hover .img-hover {
+    display: block;
+}
+
+/* MOSTRAR INFO */
+.card:hover .info {
+    opacity: 1;
 }
 
 /* 📍 DIRECCIÓN y CONTACTO */
@@ -89,68 +135,4 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-}
-/* CONTENEDOR */
-.menu-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* TARJETAS */
-.card {
-    background: white;
-    border: 2px solid #ffd700;
-    width: 220px;
-    border-radius: 15px;
-    overflow: hidden;
-    text-align: center;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    position: relative;
-}
-
-/* IMAGEN OCULTA */
-.img-hover {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    display: none;
-}
-
-/* INFO OCULTA */
-.info {
-    opacity: 0;
-    font-size: 14px;
-    padding: 10px;
-    transition: 0.3s;
-}
-
-.card:hover .info {
-    opacity: 1;
-}
-
-/* PRECIO */
-.precio {
-    font-weight: bold;
-    color: #ff6600;
-}
-
-/* EFECTO HOVER 🔥 */
-.card:hover {
-    transform: scale(1.05); /* menos exagerado */
-    height: 300px; /* crece hacia abajo */
-    z-index: 10;
-}
-
-/* MOSTRAR IMAGEN */
-.card:hover .img-hover {
-    display: block;
-}
-
-/* MOSTRAR INFO */
-.card:hover .info {
-    opacity: 1;
-    margin-bottom: 10px;
 }
