@@ -45,19 +45,24 @@ body {
 }
 
 .menu-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
 }
 
 .card {
-    background: #fff;
+    background: white;
     border: 2px solid #ffd700;
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 220px;
+    height: 200px; /* tamaño fijo */
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .card h3 {
@@ -109,17 +114,21 @@ footer {
 /* IMAGEN OCULTA */
 .img-hover {
     width: 100%;
-    height: 0;
+    height: 120px;
     object-fit: cover;
-    transition: 0.4s ease;
+    display: none;
 }
 
 /* INFO OCULTA */
 .info {
     opacity: 0;
-    padding: 0 10px;
     font-size: 14px;
-    transition: 0.3s ease;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.card:hover .info {
+    opacity: 1;
 }
 
 /* PRECIO */
@@ -130,13 +139,14 @@ footer {
 
 /* EFECTO HOVER 🔥 */
 .card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transform: scale(1.05); /* menos exagerado */
+    height: 300px; /* crece hacia abajo */
+    z-index: 10;
 }
 
 /* MOSTRAR IMAGEN */
 .card:hover .img-hover {
-    height: 120px;
+    display: block;
 }
 
 /* MOSTRAR INFO */
